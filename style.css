@@ -1,0 +1,58 @@
+#lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Linha decorativa no topo */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #0077ff;
+}
+
+/* Hover mais moderno */
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Botão estilizado */
+.card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #0077ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: #005fcc;
+}
